@@ -18,9 +18,9 @@ function run() {
 
   core.notice('Hello from my custom JavaScript Action!');
 
-  const websiteUul = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`
+  const websiteUrl = `http://${bucket}.s3-website-${bucketRegion}.amazonaws.com`
   core.setOutput('website-url', websiteUrl);    // set the output-variable which is declared in the action
-  
+
 } 
 
 run();

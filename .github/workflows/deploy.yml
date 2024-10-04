@@ -64,8 +64,8 @@ jobs:
         run: ls
       - name: Deploy site
         id: deploy
-        uses: ./.github/actions/deploy-s3-javascript
-        env:
+        uses: ./.github/actions/deploy-s3-docker
+        env:                                      # the vars are needed here too, as needed by boto3 package as by 'aws s3 sync' command
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         with:
